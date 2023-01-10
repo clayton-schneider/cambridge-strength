@@ -1,10 +1,11 @@
 ---
+import { Image } from "@astrojs/image/components";
 import Button from "@components/Button";
 ---
 
 <section class="px-edge">
-  <div class="max-w-screen-2xl mx-auto">
-    <div class="text-text-light max-w-xl">
+  <div class="max-w-screen-2xl mx-auto flex justify-between">
+    <div class="text-text-light max-w-xl relative z-20">
       <h1 class="font-anton text-6xl leading-snug">
         Welcome To <br />Cambridge Strength
       </h1>
@@ -20,6 +21,20 @@ import Button from "@components/Button";
         <Button>Join CSC</Button>
         <Button color="secondary">Drop In At CSC</Button>
       </div>
+    </div>
+
+    <div class="relative">
+      <p
+        class="absolute -left-0 top-0 z-0 -rotate-90 translate-y-[50%] -translate-x-[50%] font-anton uppercase text-[190px] text-text-faded"
+      >
+        strength
+      </p>
+      <Image
+        class="relative z-10"
+        src={import("@img/deadlifting-at-cambridge-strength.jpg")}
+        alt="deadlifting at cambridge strength"
+        format="webp"
+      />
     </div>
   </div>
 </section>
