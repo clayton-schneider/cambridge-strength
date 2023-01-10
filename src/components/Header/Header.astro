@@ -1,13 +1,13 @@
 ---
 // Import components
 import { Icon } from "astro-icon";
-// import NavMenu from "./NavMenu";
+import NavMenu from "./NavMenu";
 const links = [
-  { linkText: "Home", link: "/" },
-  { linkText: "About", link: "/about" },
-  { linkText: "Clients", link: "/clients" },
-  { linkText: "Services", link: "/services" },
-  { linkText: "Contact", link: "/contact" },
+  { linkText: "Our Gym", link: "#about" },
+  { linkText: "Pricing", link: "#pricing" },
+  { linkText: "Testimonials", link: "#testimonials" },
+  { linkText: "Gallery", link: "#gallery" },
+  { linkText: "Contact", link: "#contact" },
 ];
 
 interface Props {
@@ -29,9 +29,7 @@ const { className } = Astro.props;
         />
       </a>
 
-      <div class="hidden xl:block space-x-7"></div>
+      <NavMenu links={links} client:load />
     </div>
-
-    <!-- <NavMenu links={links} client:load /> -->
   </div>
 </header>
