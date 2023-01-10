@@ -1,6 +1,7 @@
 ---
 import { Image } from "@astrojs/image/components";
 import Button from "@components/Button";
+import Decoration from "@components/Decoration.astro";
 ---
 
 <section class="px-edge">
@@ -24,6 +25,9 @@ import Button from "@components/Button";
     </div>
 
     <div class="relative">
+      <Decoration
+        className="absolute -left-40 -bottom-0 translate-x-[-50%] translate-y-[50%]"
+      />
       <p
         class="absolute -left-0 top-0 z-0 -rotate-90 translate-y-[50%] -translate-x-[50%] font-anton uppercase text-[190px] text-text-faded"
       >
