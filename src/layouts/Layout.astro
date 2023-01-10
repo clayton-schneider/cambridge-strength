@@ -1,6 +1,7 @@
 ---
 import "../styles.css";
 import Footer from "../components/Footer.astro";
+import Header from "../components/Header/Header.astro";
 export interface Props {
   seo?: {
     metaTitle: string;
@@ -23,7 +24,8 @@ const { seo } = Astro.props;
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   </head>
-  <body>
+  <body class="bg-dark">
+    <Header />
     <main>
       <slot />
     </main>
