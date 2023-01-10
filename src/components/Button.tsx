@@ -20,8 +20,10 @@ const PrimaryBtn = ({
     href={to}
     className={
       className +
-      (color === "primary" ? "bg-primary text-darker" : "bg-red-50") +
-      " inline-block px-10 py-3 rounded-full text-lg  cursor-pointer"
+      (color === "primary"
+        ? "bg-primary text-dark"
+        : "border border-primary text-primary") +
+      " font-semibold inline-block px-10 py-5 text-lg leading-none cursor-pointer"
     }
   >
     {children}
