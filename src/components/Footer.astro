@@ -1,0 +1,116 @@
+---
+const companyLinks = [
+  { link: "#about", text: "Our Gym" },
+  { link: "#pricing", text: "Pricing" },
+  { link: "#testimonials", text: "Testimonials" },
+  { link: "#gallery", text: "Gallery" },
+  { link: "#contact", text: "Contact Us" },
+];
+
+const services = [
+  "Personal Returns",
+  "Tax Projections & Managing Estimates",
+  "Partnership & Corporations",
+  "Reporting",
+  "Trust Returns",
+  "Financials Advising",
+];
+
+const contacts = [
+  {
+    icon: "mdi:address-marker",
+    text: "1 Broadway, Arlington, MA 02474",
+  },
+  {
+    icon: "ic:outline-email",
+    text: "info@cambridgestrength.com",
+  },
+  {
+    icon: "charm:phone",
+    text: "508-614-9763",
+  },
+];
+const socialLinks = [
+  {
+    name: "ri:facebook-fill",
+    link: "https://www.facebook.com/CambridgeStrengthAndConditioning/",
+  },
+  {
+    name: "mdi:instagram",
+    link: "https://www.instagram.com/cambridgestrength/",
+  },
+  { name: "mdi:twitter", link: "https://twitter.com/CmbrdgStrength" },
+];
+
+import { Icon } from "astro-icon";
+---
+
+<section class="bg-black px-edge text-text-light">
+  <footer class="py-12">
+    <div
+      class="max-w-screen-2xl mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 text-center lg:text-left"
+    >
+      <div class="max-w-lg">
+        <Icon
+          name="logo"
+          class="mx-auto lg:mx-0 fill-white w-[200px]"
+          alt="Cambridge Strength logo"
+        />
+        <p class="mt-5 leading-loose font-rubik">
+          Our business is dedicated to providing expert guidance and
+          personalized recommendations to help individuals manage their
+          financial affairs and achieve their financial goals.
+        </p>
+        {
+          (
+            <div class="flex justify-center lg:justify-start space-x-2 mt-2">
+              {socialLinks.map((link) => (
+                <a class="bg-primary rounded-full p-1" href={link.link}>
+                  <Icon name={link.name} size={20} class="mx-auto text-black" />
+                </a>
+              ))}
+            </div>
+          )
+        }
+      </div>
+
+      <div>
+        <p class="font-bold text-xl">Company</p>
+        <ul class="mt-5 flex flex-col space-y-3">
+          {
+            companyLinks.map((link) => (
+              <li>
+                <a href={link.link}>{link.text}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div>
+        <p class="font-bold text-xl">Contact Us</p>
+        <ul class="mt-5 flex flex-col items-center lg:block space-y-5">
+          {
+            contacts.map((contact) => (
+              <li class="flex items-start space-x-5">
+                <Icon name={contact.icon} size={26} />
+                <p class="max-w-[280px]">{contact.text}</p>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="">
+    <div class="max-w-screen-xl mx-auto py-5 border-t border-white">
+      <p class="text-center">
+        Copyright &copy; 2022 <span class="text-primary"
+          >Cambridge Strength & Conditioning</span
+        >
+        | All Right Reserved | Powered By <a
+          href="https://www.simply-sprout.com">Simply Sprout</a
+        >
+      </p>
+    </div>
+  </div>
+</section>

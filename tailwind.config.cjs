@@ -20,6 +20,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#6BFA0C",
+        "text-light": "#FFFFFF",
       },
       padding: { edge: "2.5%" },
       fontFamily: {
