@@ -1,0 +1,64 @@
+---
+import FeatureCard from "@components/cards/FeatureCard.astro";
+import DecorativeGrid from "@components/decorations/DecorativeGrid.astro";
+import { Icon } from "astro-icon";
+const features = [
+  {
+    title: "Programming",
+    text: "Reach your potential with custom programming.",
+    img: {
+      src: import("@img/features/workout-programming.png"),
+      alt: "workout programming",
+    },
+  },
+  {
+    title: "Community & Mentorship",
+    text: "Surround yourself with like-minded gym-goers.",
+    img: {
+      src: import("@img/features/community-and-mentorship.jpg"),
+      alt: "cambridge strength community",
+    },
+  },
+  {
+    title: "24-Hour Access",
+    text: "Workout whenever is most convenient for you.",
+    img: {
+      src: import("@img/features/twenty-four-hour-access.jpg"),
+      alt: "twenty four hour access",
+    },
+  },
+  {
+    title: "Best-In-Class Equipment",
+    text: "Rogue and Eleiko brand racks, plates, and bars.",
+    img: {
+      src: import("@img/features/best-in-class-equipment.jpg"),
+      alt: "best in class workout equipment",
+    },
+  },
+];
+---
+
+<section id="#about" class="px-edge my-20 relative">
+  <DecorativeGrid className="right-40 top-20" />
+  <Icon
+    name="lines"
+    size={800}
+    class="absolute z-0 -translate-x-1/2 -translate-y-1/2 left-0 top-1/2 -scale-x-100"
+  />
+  <div class="max-w-screen-2xl mx-auto relative z-10">
+    <div class="text-text-light text-center">
+      <p class="font-semibold text-2xl">World Class Gym</p>
+      <h2 class="mt-2 font-anton text-5xl">Where Strength Starts</h2>
+      <div class="mt-6 w-[220px] h-0.5 bg-primary mx-auto"></div>
+    </div>
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      {
+        features.map((feature) => (
+          <div class="flex justify-center">
+            <FeatureCard data={feature} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
