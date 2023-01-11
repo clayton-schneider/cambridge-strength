@@ -1,0 +1,37 @@
+---
+import PlanCard from "@components/cards/PlanCard.astro";
+import DecorativeText from "@components/decorations/DecorativeText.astro";
+import DecorativeGrid from "@components/decorations/DecorativeGrid.astro";
+import { Icon } from "astro-icon";
+const plans = [
+  { title: "Regular Membership", price: { value: "99", term: "Month" } },
+  { title: "Student Membership", price: { value: "75", term: "Month" } },
+  { title: "Day Drop In", price: { value: "20", term: "Day" } },
+];
+---
+
+<section id="memberships" class="my-32 px-edge relative">
+  <DecorativeText className="top-0 left-20 !text-text-xfaded">
+    Pricing
+  </DecorativeText>
+  <DecorativeGrid className="right-1/4 -top-20" />
+  <DecorativeGrid className="right-0 -bottom-20" />
+
+  <Icon
+    name="lines"
+    size={1000}
+    class="absolute top-1/4 -translate-x-1/2 -translate-y-1/2 -right-[60%]"
+  />
+  <div class="max-w-screen-2xl mx-auto relative z-10">
+    <div class="text-text-light text-center">
+      <p class="font-semibold text-2xl">Our Gym Memberships</p>
+      <h2 class="mt-2 font-anton text-5xl">Where Strength Starts</h2>
+      <div class="mt-6 w-[220px] h-0.5 bg-primary mx-auto"></div>
+    </div>
+    <div
+      class="mt-10 grid grid-cols-1 place-items-center lg:grid-cols-3 gap-10"
+    >
+      {plans.map((plan) => <PlanCard data={plan} />)}
+    </div>
+  </div>
+</section>

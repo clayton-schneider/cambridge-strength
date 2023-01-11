@@ -1,0 +1,14 @@
+---
+export interface Props {
+  className: string;
+}
+
+const { className = "" } = Astro.props;
+---
+
+<p
+  class={className +
+    " hidden md:block absolute z-0 -rotate-90 translate-y-[50%] -translate-x-[50%] font-anton uppercase text-[190px] text-text-faded"}
+>
+  <slot />
+</p>

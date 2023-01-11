@@ -8,7 +8,7 @@ interface Props {
   target?: "_blank" | undefined;
   className?: string;
 }
-const PrimaryBtn = ({
+const Button = ({
   children,
   to,
   target,
@@ -19,10 +19,11 @@ const PrimaryBtn = ({
     target={target}
     href={to}
     className={
-      className +
+      (className ? className : "") +
+      //@ts-ignore
       (color === "primary"
-        ? "bg-primary text-dark"
-        : "border border-primary text-primary") +
+        ? " bg-primary text-dark"
+        : " border border-primary text-primary") +
       " font-semibold inline-block px-10 py-5 text-lg leading-none cursor-pointer"
     }
   >
@@ -30,4 +31,4 @@ const PrimaryBtn = ({
   </a>
 );
 
-export default PrimaryBtn;
+export default Button;

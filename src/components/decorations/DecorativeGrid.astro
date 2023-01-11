@@ -1,0 +1,15 @@
+---
+export interface Props {
+  className?: string;
+}
+
+const { className = "" } = Astro.props;
+---
+
+<div class={className + " absolute z-0 grid grid-cols-8 gap-4 w-[128px]"}>
+  {
+    [...Array(64).keys()].map(() => (
+      <div class="bg-white/60 w-0.5 h-0.5 rounded-full" />
+    ))
+  }
+</div>

@@ -1,7 +1,7 @@
 ---
 import { Image } from "@astrojs/image/components";
 import Button from "@components/Button";
-import Decoration from "@components/Decoration.astro";
+import DecorativeGrid from "@components/decorations/DecorativeGrid.astro";
 ---
 
 <section class="px-edge">
@@ -29,7 +29,7 @@ import Decoration from "@components/Decoration.astro";
     </div>
 
     <div class="relative">
-      <Decoration
+      <DecorativeGrid
         className="hidden md:absolute lg:-left-40 lg:-bottom-0 translate-x-[-50%] translate-y-[50%]"
       />
       <p
