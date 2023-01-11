@@ -2,6 +2,7 @@
 import "../styles.css";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header/Header.astro";
+import TopBar from "@components/TopBar.astro";
 export interface Props {
   seo?: {
     metaTitle: string;
@@ -25,6 +26,9 @@ const { seo } = Astro.props;
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   </head>
   <body class="bg-dark overflow-x-hidden">
+    <TopBar>
+      Get in touch with us at info@cambridgestrength.com or 508-614-9763
+    </TopBar>
     <Header />
     <main>
       <slot />
