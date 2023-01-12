@@ -1,0 +1,86 @@
+---
+import { Image } from "@astrojs/image/components";
+const images = [
+  {
+    img: {
+      src: import("@img/gallery/gallery-1.jpg"),
+      alt: "",
+    },
+    size: "big",
+  },
+  {
+    img: {
+      src: import("@img/gallery/gallery-5.jpg"),
+      alt: "",
+    },
+    size: "tall",
+  },
+
+  {
+    img: {
+      src: import("@img/gallery/gallery-6.jpg"),
+      alt: "",
+    },
+    size: "wide",
+  },
+  {
+    img: {
+      src: import("@img/gallery/gallery-2.jpg"),
+      alt: "",
+    },
+    size: "wide",
+  },
+  {
+    img: {
+      src: import("@img/gallery/gallery-3.jpg"),
+      alt: "",
+    },
+    size: "wide",
+  },
+  {
+    img: {
+      src: import("@img/gallery/gallery-4.jpg"),
+      alt: "",
+    },
+    size: "wide",
+  },
+  {
+    img: {
+      src: import("@img/gallery/gallery-7.jpg"),
+      alt: "",
+    },
+    size: "regular",
+  },
+];
+---
+
+<section class="px-edge my-40">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="text-center">
+      <h2 class="font-anton text-5xl text-text-light">Photo Gallery</h2>
+      <div class="mt-5 inline-block bg-primary w-full max-w-[220px] h-0.5">
+      </div>
+    </div>
+    <div class="mt-10 grid gap-5 grid-cols-mason auto-rows-[400px]">
+      {
+        images.map((img) => (
+          <div
+            class={
+              (img.size === "big" ? "row-span-2 md:col-span-2" : "") +
+              (img.size == "tall" ? "row-span-2 md:col-span-1" : "") +
+              (img.size === "wide" ? "md:col-span-2" : "") +
+              (img.size === "regular" ? "md:col-span-1" : "") +
+              " w-full h-full col-span-full align-middle flex justify-center items-center"
+            }
+          >
+            <Image
+              class={" w-full h-full object-cover align-middle inline-block"}
+              src={img.img.src}
+              alt={img.img.alt}
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

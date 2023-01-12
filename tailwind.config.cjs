@@ -31,6 +31,7 @@ module.exports = {
         sans: ["Inter", ...FONT_FAMILY_BASE],
         anton: ["Anton", ...FONT_FAMILY_BASE],
       },
+      gridTemplateColumns: { mason: "repeat(auto-fit, minmax(250px, 1fr))" },
     },
   },
   plugins: [],

@@ -22,7 +22,7 @@ const NavMenu = ({ links }: Props) => {
     <div className="">
       <ul
         className={
-          "absolute top-[144px] z-50 flex w-full flex-col items-start gap-6 bg-white font-bebas py-5 px-4 text-xl transition-all duration-300 xl:static xl:w-auto xl:flex-row xl:items-center xl:bg-transparent xl:py-0 xl:px-0 " +
+          "absolute top-[160px] z-50 flex w-full flex-col items-start gap-6 bg-white font-bebas py-5 px-4 text-xl transition-all duration-300 xl:static xl:w-auto xl:flex-row xl:items-center xl:bg-transparent xl:py-0 xl:px-0 " +
           (isOpen ? "left-0 z-[100] !text-black" : "-left-full text-white")
         }
       >
