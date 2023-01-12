@@ -1,0 +1,42 @@
+---
+import { Image } from "@astrojs/image/components";
+import Button from "@components/Button";
+---
+
+<section id="contact" class="px-edge relative">
+  <Image
+    class="absolute min-h-[400px] object-cover inset-0 z-0"
+    src={import("@img/contact.png")}
+    alt="contact"
+  />
+  <div class="max-w-screen-2xl mx-auto relative z-10 py-14">
+    <div class="font-anton text-5xl text-center text-text-light">
+      <h2>Contact Us</h2>
+      <div class="w-full max-w-[220px] bg-primary h-0.5 inline-block"></div>
+    </div>
+    <div class="mt-10 bg-black py-14 px-20 mx-auto max-w-4xl w-full">
+      <p class="font-anton uppercase text-4xl text-text-light text-center">
+        Send Us A Message
+      </p>
+      <form class="mt-10 space-y-5">
+        <input
+          class="p-6 border border-white block w-full bg-[#222222]"
+          type="text"
+          placeholder="Name"
+        />
+        <input
+          class="p-6 border border-white block w-full bg-[#222222]"
+          type="email"
+          placeholder="Email Address"
+        />
+        <textarea
+          class="p-6 border border-white block w-full bg-[#222222]"
+          placeholder="Message"
+          rows="10"></textarea>
+        <button class="w-full"
+          ><Button className="w-full">Submit</Button></button
+        >
+      </form>
+    </div>
+  </div>
+</section>
