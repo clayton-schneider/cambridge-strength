@@ -1,0 +1,76 @@
+---
+import TestimonialCard from "@components/cards/TestimonialCard.astro";
+import DecorativeGrid from "@components/decorations/DecorativeGrid.astro";
+import DecorativeText from "@components/decorations/DecorativeText.astro";
+import { Icon } from "astro-icon";
+const testimonials = [
+  {
+    name: "Jerry Peterson",
+    img: {
+      src: import("@img/testimonials/jerry-peterson.jpg"),
+      alt: "jerry peterson testimonial",
+    },
+    text: "This is a hub for strength enthusiasts of all ages. The atmosphere is electric, everyone was cordial and helpful. The owner, Steve, could not have been nicer! My wife and I came down from Maine to train with the team and had a blast. Thank you!!",
+    primary: false,
+  },
+  {
+    name: "Audrey Wyer",
+    img: {
+      src: import("@img/testimonials/audrey-wyer.jpg"),
+      alt: "audrey wyer testimonial",
+    },
+    text: "Phenomenal gym for weightlifting. Plenty of knowledgeable members who are more than happy to share wisdom or lend a hand. Stocked with equipment you wont find in your typical commercial gym with 24 hour access.",
+    primary: true,
+  },
+  {
+    name: "AC",
+    img: {
+      src: import("@img/testimonials/ac.jpg"),
+      alt: "AC testimonial",
+    },
+    text: "Love this gym! Im new to the powerlifting community but everyone is so sweet and helpful! They have any equipment you need (including a barbell jack which is so so useful)",
+    primary: false,
+  },
+];
+---
+
+<section class="my-20 px-edge relative">
+  <DecorativeGrid className="left-1/2 -top-20" />
+  <DecorativeGrid className="left-1/3 -bottom-20" />
+  <DecorativeText
+    className="rotate-0 translate-y-0 translate-x-0 right-0 -bottom-32 text-text-xfaded"
+  >
+    Testimonials
+  </DecorativeText>
+  <Icon
+    name="lines"
+    size={800}
+    class="absolute top-2/3 -translate-x-1/2 -translate-y-1/2 -scale-x-100"
+  />
+  <div class="max-w-screen-2xl mx-auto relative z-10">
+    <div
+      class="flex gap-5 flex-col lg:flex-row text-center lg:text-left justify-between text-text-light"
+    >
+      <div>
+        <p class="font-anton text-5xl uppercase">Testimonials</p>
+        <div class="mt-5 h-0.5 w-full max-w-[220px] bg-primary inline-block">
+        </div>
+      </div>
+      <div class="max-w-lg mx-auto lg:mx-0">
+        <p class="text-lg leading-relaxed">
+          Whether you are a beginner or an experienced lifter, you will find a
+          home here. Come lift with us and be a part of our inclusive community!
+        </p>
+      </div>
+    </div>
+    <div
+      class="mt-20 flex flex-col lg:flex-row items-center lg:items-stretch justify-between gap-10"
+    >
+      {
+        testimonials.map((testimonial) => (
+          <TestimonialCard testimonial={testimonial} />
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+---
+import { Image } from "@astrojs/image/components";
+export interface Props {
+  testimonial: {
+    name: string;
+    text: string;
+    img: {
+      src: Promise<typeof import("*.jpg")>;
+      alt: string;
+    };
+
+    primary?: boolean;
+  };
+}
+
+const { testimonial } = Astro.props;
+---
+
+<div
+  class={(testimonial.primary
+    ? "max-w-[640px] bg-primary text-text-faded"
+    : "max-w-[440px] text-text-light") +
+    " w-full px-10 py-16 border border-primary  text-center"}
+>
+  <Image
+    class="mx-auto w-[110px] h-[110px] rounded-full object-cover"
+    src={testimonial.img.src}
+    alt={testimonial.img.alt}
+  />
+  <p class="mt-5 font-anton uppercase text-3xl">{testimonial.name}</p>
+  <p class="mt-5 italic text-lg">{testimonial.text}</p>
+</div>
