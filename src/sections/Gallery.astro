@@ -66,10 +66,10 @@ const images = [
         images.map((img) => (
           <div
             class={
-              (img.size === "big" ? "row-span-2 md:col-span-2" : "") +
-              (img.size == "tall" ? "row-span-2 md:col-span-1" : "") +
-              (img.size === "wide" ? "md:col-span-2" : "") +
-              (img.size === "regular" ? "md:col-span-1" : "") +
+              (img.size === "big" ? "row-span-2 lg:col-span-2" : "") +
+              (img.size == "tall" ? "row-span-2 lg:col-span-1" : "") +
+              (img.size === "wide" ? "lg:col-span-2" : "") +
+              (img.size === "regular" ? "lg:col-span-1" : "") +
               " w-full h-full col-span-full align-middle flex justify-center items-center"
             }
           >

@@ -25,14 +25,16 @@ const { seo } = Astro.props;
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   </head>
-  <body class="bg-dark overflow-x-hidden">
-    <TopBar>
-      Get in touch with us at info@cambridgestrength.com or 508-614-9763
-    </TopBar>
-    <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer />
+  <body class="bg-dark">
+    <div class="overflow-x-hidden relative">
+      <TopBar>
+        Get in touch with us at info@cambridgestrength.com or 508-614-9763
+      </TopBar>
+      <Header />
+      <main>
+        <slot />
+      </main>
+      <Footer />
+    </div>
   </body>
 </html>
