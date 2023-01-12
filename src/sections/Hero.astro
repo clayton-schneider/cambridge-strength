@@ -9,20 +9,22 @@ import DecorativeGrid from "@components/decorations/DecorativeGrid.astro";
     class="max-w-screen-2xl mx-auto flex gap-5 flex-col items-center lg:items-start lg:flex-row justify-between"
   >
     <div
-      class="text-text-light max-w-xl relative z-20 text-center lg:text-left"
+      class="text-text-light w-full lg:max-w-xl relative z-20 text-center lg:text-left"
     >
-      <h1 class="font-anton text-6xl leading-snug">
+      <h1 class="font-anton text-4xl md:text-6xl leading-snug">
         Welcome To <br />Cambridge Strength
       </h1>
       <div class="mt-6 h-[3px] bg-primary"></div>
-      <p class="mt-6 text-lg leading-snug">
+      <p class="mt-6 text-base lg:text-lg leading-snug">
         We are located on the Cambridge/Arlington city line at 1 Broadway
         Arlington, MA. We are across the street from the Stop and Shop on 16,
         next to the bike path. Parking is available at the front of the building
         or on the street- plenty of parking. Our door is the dark door to the
         left.
       </p>
-      <div class="mt-6 space-x-5">
+      <div
+        class="mt-6 flex flex-col md:flex-row justify-center lg:justify-start gap-5"
+      >
         <Button>Join CSC</Button>
         <Button color="secondary">Drop In At CSC</Button>
       </div>
