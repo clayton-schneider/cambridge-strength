@@ -8,6 +8,7 @@ export interface Props {
       value: string;
       term: string;
     };
+    link: string;
   };
 }
 
@@ -21,7 +22,11 @@ const { data } = Astro.props;
   <p class="font-anton text-6xl mt-5">
     ${data.price.value}/<span class="text-2xl">{data.price.term}</span>
   </p>
-  <Button className="mt-10 group-hover:!bg-black group-hover:!text-text-light">
+  <Button
+    target="_blank"
+    to={data.link}
+    className="mt-10 group-hover:!bg-black group-hover:!text-text-light"
+  >
     Join At CSC
   </Button>
 </div>
